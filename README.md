@@ -11,6 +11,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     npm i
     ```
 
+    If facing error when install node modules use this command
+
+    ```js
+    npm i --legacy-peer-deps
+    ```
+
 3. To start
 
     ```js
