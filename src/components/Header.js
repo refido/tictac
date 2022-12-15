@@ -11,6 +11,7 @@ import AddIcon from '@material-ui/icons/Add'
 import ForumIcon from '@material-ui/icons/Flag'
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+// import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -42,8 +43,10 @@ const Header = () => {
             </HeaderCenter>
             <HeaderRight>
                 <div className="header__info">
-                    <Avatar src=" " />
-                    <h4>TicTac</h4>
+                    {/* <Link to='/login'> */}
+                        <Avatar src=" " />
+                        <h4>TicTac</h4>
+                    {/* </Link> */}
                 </div>
                 <IconButton>
                     <AddIcon />
