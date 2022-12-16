@@ -4,27 +4,30 @@ import { Link } from "react-router-dom";
 const Signup = () => {
     return (
         <SignupWrapper>
-           <Title>SIGN UP</Title>
-            <InputForm>
-                <InputLabel>Email</InputLabel>
-                <input className="emailInput" type="email" required />
-            </InputForm>
-            <InputForm>
-                <InputLabel>Name</InputLabel>
-                <input className="nameInput" type="text" required />
-            </InputForm>
-            <InputForm>
-                <InputLabel>Password</InputLabel>
-                <input className="passwordInput" type="password" required />
-            </InputForm>
-            <InputForm>
-                <InputLabel></InputLabel>
-                <button>Log in</button>
-            </InputForm>
-            <InputForm>
-                <InputLabel></InputLabel>
-                Already have an account? <LoginLink> Log in</LoginLink>
-            </InputForm>
+            <img width='200px' src="logo_1_crop.png"/>
+            <Title>SIGN UP</Title>
+            <form>
+                <InputForm>
+                    <InputLabel>Email</InputLabel>
+                    <input className="emailInput" type="email" required />
+                </InputForm>
+                <InputForm>
+                    <InputLabel>Name</InputLabel>
+                    <input className="nameInput" type="text" required />
+                </InputForm>
+                <InputForm>
+                    <InputLabel>Password</InputLabel>
+                    <input className="passwordInput" type="password" required />
+                </InputForm>
+                <InputForm>
+                    <InputLabel></InputLabel>
+                    <button type="submit">Log in</button>
+                </InputForm>
+                <InputForm>
+                    <InputLabel></InputLabel>
+                    Already have an account? <LoginLink> <Link to="/login"> Log in</Link></LoginLink>
+                </InputForm>
+            </form>
         </SignupWrapper>
     );
 };
@@ -42,6 +45,7 @@ const LoginLink = styled.span`
 `;
 
 const SignupWrapper = styled.div`
+    margin: 30px;
     text-align: center;
 `;
 

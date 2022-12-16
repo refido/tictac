@@ -1,30 +1,41 @@
+import { useState } from "react";
 import styled from "styled-components";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Login = () => {
+    const [data, setData] = useState({ email: "", password: "" });
+
+
     return (
         <LoginWrapper>
+             <img width='200px' src="logo_1_crop.png"/>
             <Title>LOG IN</Title>
-            <InputForm>
-                <InputLabel>Email</InputLabel>
-                <input className="emailInput" type="email" required />
-            </InputForm>
+            <form>
+                <InputForm>
+                    <InputLabel>Email</InputLabel>
+                    <input className="emailInput" type="email" required />
+                </InputForm>
 
-            <InputForm>
-                <InputLabel>Password</InputLabel>
-                <input className="passwordInput" type="password" required />
-            </InputForm>
-            <InputForm>
-                <InputLabel></InputLabel>
-                <button>Log in</button>
-            </InputForm>
-            <InputForm>
-                <InputLabel></InputLabel>
-                Don't have an account? <SignUpLink> Sign up</SignUpLink>
-            </InputForm>
+                <InputForm>
+                    <InputLabel>Password</InputLabel>
+                    <input className="passwordInput" type="password" required />
+                </InputForm>
+                <InputForm>
+                    <InputLabel></InputLabel>
+                    <button>Log in</button>
+                </InputForm>
+                <InputForm>
+                    <InputLabel></InputLabel>
+                    Don't have an account? <SignUpLink><Link to="/signup"> Sign up</Link></SignUpLink>
+                </InputForm>
+            </form>
         </LoginWrapper>
     );
 };
+
+const Logo = styled.img`
+    width: 100px;
+`;
 
 const InputLabel = styled.div`
     min-width: 80px;
@@ -39,6 +50,7 @@ const SignUpLink = styled.span`
 `;
 
 const LoginWrapper = styled.div`
+    margin: 30px;
     text-align: center;
 `;
 
