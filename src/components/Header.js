@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <HeaderWrapper>
             <HeaderLeft>
-                <img src="logo192.png" alt="Popular" />
+                <img src="logo_1_crop.png" alt="Popular" />
             </HeaderLeft>
             <HeaderInput>
                 <SearchIcon />
